@@ -1,4 +1,4 @@
-# RestoranAppExample
+# RestoranAppExample 
 Angular/.Net web app example with tests demonstrating n-tier architecture and some SOLID principles
 
 Screenshoot: https://i.imgur.com/EKsUpwM.png
@@ -21,14 +21,14 @@ Handlers represent functionality -horizontal separation. Example demonstrates tw
 2. chat rooms and messaging -see other ...Handler.cs files (this functionality is actually remaining of my another app which I didn't want to delete in order to demonstrate something below)
 
 ##Short theory on each layer:
-稲estro.Entities: This layer provides a suite of objects (POCOs) that represent domain entities as well as data transfer objects.
-稲estro.Common: This layer provides a suite of common reusable components and helpers that are meant to be used by most other layers.
-稢lient-app: responsible for facilitating user interaction. This includes displaying information to the user and passing user inputs to the API layer for processing.
-稲estro.UIWeb: The purpose of this layer is to expose the TS.BusinesLogic methods on a network. This layer performs no logic on its own.
-稲estro.BusinessLogic: This layer is responsible for implementing the applications business rules. It is important that the Business Logic classes do not directly access data but instead for data IO they uses uniform way to access lower layer. In this layer developer will work most of time when implementing backend for new functionalities and not working on architecture. This layer should also encapsulate all methods with exception handling and logging blocks/mechanisms.
-稲estro.Cache: Cashing of data neccessary for business layer could be done here. One implemetation is to copy all method signitures from data layer to make methods in this layer and whenever arguments values already exist in memory from previoues call use result from memory instead fetching from lower layer with some time expiration.
-稲estro.Data: This layer provides methods for performing CRUD operations. One of the main purposes of this layer is to serve as an abstraction for the persistence framework in the persistence layer like SQL layer. This makes it easy to change persistence layers without affecting the tiers that consume their functionality. Nowdays, Entity Framework already provides this abstraction so its commands could be written here ommiting need for SQL layer.
-稲estro.SQL: This layer is responsible for performing CRUD operations by directly communicating with the underlying database/data store like MS SQL DB. Not implemented in this example.
+路Restro.Entities: This layer provides a suite of objects (POCOs) that represent domain entities as well as data transfer objects.
+路Restro.Common: This layer provides a suite of common reusable components and helpers that are meant to be used by most other layers.
+路Client-app: responsible for facilitating user interaction. This includes displaying information to the user and passing user inputs to the API layer for processing.
+路Restro.UIWeb: The purpose of this layer is to expose the TS.BusinesLogic methods on a network. This layer performs no logic on its own.
+路Restro.BusinessLogic: This layer is responsible for implementing the applications business rules. It is important that the Business Logic classes do not directly access data but instead for data IO they uses uniform way to access lower layer. In this layer developer will work most of time when implementing backend for new functionalities and not working on architecture. This layer should also encapsulate all methods with exception handling and logging blocks/mechanisms.
+路Restro.Cache: Cashing of data neccessary for business layer could be done here. One implemetation is to copy all method signitures from data layer to make methods in this layer and whenever arguments values already exist in memory from previoues call use result from memory instead fetching from lower layer with some time expiration.
+路Restro.Data: This layer provides methods for performing CRUD operations. One of the main purposes of this layer is to serve as an abstraction for the persistence framework in the persistence layer like SQL layer. This makes it easy to change persistence layers without affecting the tiers that consume their functionality. Nowdays, Entity Framework already provides this abstraction so its commands could be written here ommiting need for SQL layer.
+路Restro.SQL: This layer is responsible for performing CRUD operations by directly communicating with the underlying database/data store like MS SQL DB. Not implemented in this example.
 
 ##Example demonstrates two implementations of testing and instantiating handlers in layers:
 1. dependency injection approach -here we pass lower layer handler to constructors in current layer. Lower layer method is called like this: _dlHandlerForOrders.InsertOrder(m); When testing handlers from lower layers that return fake data are pre-created and passed to these constructors. See full tests at F4CIO.Restro.UIWeb.Test
