@@ -1,0 +1,47 @@
+﻿<Properties StartupConfiguration="{AF8082EB-1278-45F3-86AF-6506BBAAC8EB}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RestroApp/Controllers/OrderController.cs">
+    <Files>
+      <File FileName="RestroApp/ClientApp/src/app/home/home.component.html" Line="17" Column="76" />
+      <File FileName="RestroApp/ClientApp/src/app/home/home.component.ts" Line="21" Column="1" />
+      <File FileName="RestroApp/Controllers/WeatherForecastController.cs" Line="1" Column="1" />
+      <File FileName="RestroApp/Startup.cs" Line="30" Column="1" />
+      <File FileName="RestroApp/Controllers/OrderController.cs" Line="14" Column="6" />
+      <File FileName="RestroApp/Interfaces/IOrder.cs" Line="13" Column="1" />
+      <File FileName="RestroApp/OrderModel.cs" Line="11" Column="2" />
+      <File FileName="RestroApp/BLogic/OrderBLogic.cs" Line="30" Column="35" />
+      <File FileName="RestroApp/Data/ApiContext.cs" Line="11" Column="10" />
+      <File FileName="RestroApp/ClientApp/src/app/app.module.ts" Line="1" Column="1" />
+      <File FileName="RestroApp/ClientApp/src/app/app.component.ts" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RestroApp" expanded="True">
+            <Node name="RestroApp" expanded="True">
+              <Node name="ClientApp" expanded="True">
+                <Node name="src" expanded="True">
+                  <Node name="app" expanded="True">
+                    <Node name="home" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Controllers" expanded="True">
+                <Node name="OrderController.cs" selected="True" />
+              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="DataAccess" expanded="True" />
+              <Node name="Interfaces" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.RestroApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,38 @@
+<br />
+<h1>Hello, Welcome User!</h1>
+<p>Welcome to your new Restaurant application </p>
+
+<h3>Create new order</h3>
+<form (ngSubmit)="onSubmit()" #orderForm="ngForm">
+    <div class="form-group">
+        <label>Order Name </label>
+        <input class="form-control" type="text" name="summary" required
+               [(ngModel)]="model.summary"/>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Send Order </button>
+        <button type="button" class="btn btn-default" (click)="orderForm.reset()">Clear</button>
+    </div>
+    <div class="form-group">
+        <input class="form-control" type="text" name="output" [(ngModel)]="msg" readonly />
+    </div>
+</form>
+
+    <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="orders">
+        <thead>
+            <tr>
+                <th>#Id</th>
+                <th>Date</th>
+                <th>Summary</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orders, let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ order.date }}</td>
+                <td>{{ order.summary }}</td>
+                <td>{{ order.status }}</td>
+            </tr>
+        </tbody>
+    </table>
