@@ -1,5 +1,5 @@
 # RestoranAppExample
-Angular/.Net web app example with tests demonstrating n-tier architecture and some SOLID principles
+Angular/.Net Core web app example with tests demonstrating n-tier architecture and some SOLID principles
 
 Screenshoot: https://i.imgur.com/EKsUpwM.png
 
