@@ -2,6 +2,7 @@
 Angular/.Net Core web app example with tests demonstrating n-tier architecture and some SOLID principles
 
 Screenshoot: https://i.imgur.com/EKsUpwM.png
+![RestoranAppExample](https://i.imgur.com/EKsUpwM.png)
 
 # How to run?
 1. You need to have Visual Studio (https://visualstudio.microsoft.com/downloads/) and NodeJs (https://nodejs.org/en/download/) installed. 
